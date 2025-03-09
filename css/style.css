@@ -286,6 +286,8 @@ button:hover {
 /* Responsive Design */
 
 @media (max-width: 768px) {
+
+
     .links {
         display: none;
     }
@@ -317,4 +319,37 @@ button:hover {
     .form-row input {
         width: 100%;
     }
+/* Chatbox Styling */
+#chatbox-container {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: none; /* Hidden initially */
+    flex-direction: column;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#chatbox-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0044cc;
+    color: white;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+}
+
+#close-chat {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
 }
