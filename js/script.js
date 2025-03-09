@@ -38,8 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
         width: 150,
         height: 150,
         correctLevel: QRCode.CorrectLevel.H
-
-    
+  
     });
 
     setTimeout(() => {
