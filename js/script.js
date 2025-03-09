@@ -29,42 +29,42 @@ botui.message.add({
 });
 
 // QR Code Generator - Hidden but Functional
-document.addEventListener("DOMContentLoaded", function() {
-    var qrContainer = document.createElement("div"); // Create a temporary container
-    document.body.appendChild(qrContainer); // Add it to the page (hidden)
+//document.addEventListener("DOMContentLoaded", function() {
+   // var qrContainer = document.createElement("div"); // Create a temporary container
+    //document.body.appendChild(qrContainer); // Add it to the page (hidden)
 
-    var qrCode = new QRCode(document.createElement("div"), {
-        text: "https://kerinq.github.io/Kerin/", // ✅ Your live website link
-        width: 150,
-        height: 150,
-        correctLevel: QRCode.CorrectLevel.H
-    });
+    //var qrCode = new QRCode(document.createElement("div"), {
+       // text: "https://kerinq.github.io/Kerin/", // ✅ Your live website link
+      //  width: 150,
+       // height: 150,
+      //  correctLevel: QRCode.CorrectLevel.H
+ //   });
     
 
-    setTimeout(() => {
-        var qrImage = qrContainer.querySelector("img");
-        if (qrImage) {
-            console.log("🔗 QR Code Generated:", qrImage.src); // Logs QR image URL
+  //  setTimeout(() => {
+      //  var qrImage = qrContainer.querySelector("img");
+      //  if (qrImage) {
+        //    console.log("🔗 QR Code Generated:", qrImage.src); // Logs QR image URL
             
             // Make the hidden button visible
-            document.getElementById("downloadQR").style.display = "block"; 
+           // document.getElementById("downloadQR").style.display = "block"; 
             
             // When the button is clicked, download the QR code
-            document.getElementById("downloadQR").addEventListener("click", function() {
-                var link = document.createElement("a");
-                link.href = qrImage.src;
-                link.download = "portfolio_qr_code.png"; // Set file name
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-            });
-        }
+          //  document.getElementById("downloadQR").addEventListener("click", function() {
+             //   var link = document.createElement("a");
+             //   link.href = qrImage.src;
+              //  link.download = "portfolio_qr_code.png"; // Set file name
+             //   document.body.appendChild(link);
+               // link.click();
+               // document.body.removeChild(link);
+           // });
+       // }
         
-        document.body.removeChild(qrContainer); // Remove QR div after generating
-    }, 500); // Small delay to ensure QR code is generated
+       // document.body.removeChild(qrContainer); // Remove QR div after generating
+   // },// 500); // Small delay to ensure QR code is generated
 
 
-});
+//});
 
     
     
