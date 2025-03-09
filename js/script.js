@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
         document.body.removeChild(qrContainer); // Remove QR div after generating
     }, 500); // Small delay to ensure QR code is generated
-});
+
 
 });
 
