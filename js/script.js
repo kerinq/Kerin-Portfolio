@@ -31,13 +31,15 @@ botui.message.add({
 // QR Code Generator - Hidden but Functional
 document.addEventListener("DOMContentLoaded", function() {
     var tempDiv = document.createElement("div"); // Create a hidden div
-    document.body.appendChild(tempDiv); // Append it temporarily
+    document.body.appendChild(tempDiv);
 
     var qrCode = new QRCode(tempDiv, {
-        text: "https://kerinq.github.io", // 🔗 Replace with your actual portfolio link
+        text: "https://kerinq.github.io/Kerin/", // ✅ Updated portfolio link
         width: 150,
         height: 150,
-        correctLevel: QRCode.CorrectLevel.H // High error correction for better scanning
+        correctLevel: QRCode.CorrectLevel.H
+
+    
     });
 
     setTimeout(() => {
