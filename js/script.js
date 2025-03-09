@@ -61,7 +61,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
     
-
     // Append Messages to Chatbox
     function appendMessage(sender, message) {
         let messageElement = document.createElement("div");
@@ -102,7 +101,6 @@ document.addEventListener("DOMContentLoaded", function() {
             return "I'm here to help! You can ask about my resume, projects, or contact info.";
         }
     }
-
 });
 
 // Contact Form Submission
