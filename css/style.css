@@ -268,42 +268,7 @@ button:hover {
 }
 
 
-/* Responsive Design */
 
-@media (max-width: 768px) {
-
-
-    .links {
-        display: none;
-    }
-    .hamburg {
-        display: block;
-        color: white;
-    }
-    .dropdown {
-        display: block;
-    }
-    .home-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    .content,
-    .image {
-        width: 100%;
-    }
-    .about-projects-container {
-        flex-direction: column;
-    }
-    #about,
-    #projects {
-        width: 100%;
-    }
-    .form-row {
-        flex-direction: column;
-    }
-    .form-row input {
-        width: 100%;
-    }
 /* Chatbox - Positioned on the right & pops up */
 #chatbox-container {
     position: fixed;
@@ -321,6 +286,7 @@ button:hover {
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     transform: translateY(20px);
     opacity: 0;
+    z-index: 1000;
 }
 
 /* Show when active */
@@ -406,4 +372,41 @@ button:hover {
     background: #00aa00;
     transform: scale(1.1);
 }
-}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+
+    .links {
+        display: none;
+    }
+    .hamburg {
+        display: block;
+        color: white;
+    }
+    .dropdown {
+        display: block;
+    }
+    .home-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .content,
+    .image {
+        width: 100%;
+    }
+    .about-projects-container {
+        flex-direction: column;
+    }
+    #about,
+    #projects {
+        width: 100%;
+    }
+    .form-row {
+        flex-direction: column;
+    }
+    .form-row input {
+        width: 100%;
+    }
+    }
