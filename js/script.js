@@ -33,12 +33,13 @@ document.addEventListener("DOMContentLoaded", function() {
     var qrContainer = document.createElement("div"); // Create a temporary container
     document.body.appendChild(qrContainer); // Add it to the page (hidden)
 
-    var qrCode = new QRCode(qrContainer, {
-        text: "https://kerinq.github.io/Kerin/", // ✅ Your portfolio link
+    var qrCode = new QRCode(document.createElement("div"), {
+        text: "https://kerinq.github.io/Kerin/", // ✅ Your live website link
         width: 150,
         height: 150,
         correctLevel: QRCode.CorrectLevel.H
     });
+    
 
     setTimeout(() => {
         var qrImage = qrContainer.querySelector("img");
