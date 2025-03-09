@@ -268,18 +268,6 @@ button:hover {
 }
 
 
-/* QR Code */
-
-.qrcode-container {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background: white;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-
 /* Responsive Design */
 
 @media (max-width: 768px) {
