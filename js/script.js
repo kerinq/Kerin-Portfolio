@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
         toggleChatbox.style.display = "none"; // Hide the chat button
     });
 
-    // Close Chatbox when clicking the close button
+    // Close Chatbox 
     closeChat.addEventListener("click", function() {
         chatbox.classList.remove("active");
         setTimeout(() => {
@@ -38,20 +38,31 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Handle Sending Messages
     sendMessageBtn.addEventListener("click", function() {
+        sendUserMessage();
+    });
+    
+    chatInput.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            sendUserMessage();
+        }
+    });
+    
+    function sendUserMessage() {
         let userMessage = chatInput.value.trim();
         if (userMessage !== "") {
             appendMessage("You", userMessage);
-            chatInput.value = "";
-
-            // Generate response from chatbot
+            chatInput.value = ""; // Clear input
+    
+            // Generate chatbot response after 1 second
             setTimeout(() => {
                 let botResponse = getBotResponse(userMessage);
                 appendMessage("Bot", botResponse);
             }, 1000);
         }
-    });
+    }
+    
 
-    // Function to Append Messages to Chatbox
+    // Append Messages to Chatbox
     function appendMessage(sender, message) {
         let messageElement = document.createElement("div");
         messageElement.innerHTML = `<strong>${sender}:</strong> ${message}`;
@@ -91,50 +102,8 @@ document.addEventListener("DOMContentLoaded", function() {
             return "I'm here to help! You can ask about my resume, projects, or contact info.";
         }
     }
+
 });
-
-
-
-// QR Code Generator - Hidden but Functional
-//document.addEventListener("DOMContentLoaded", function() {
-   // var qrContainer = document.createElement("div"); // Create a temporary container
-    //document.body.appendChild(qrContainer); // Add it to the page (hidden)
-
-    //var qrCode = new QRCode(document.createElement("div"), {
-       // text: "https://kerinq.github.io/Kerin/", // ✅ Your live website link
-      //  width: 150,
-       // height: 150,
-      //  correctLevel: QRCode.CorrectLevel.H
- //   });
-    
-
-  //  setTimeout(() => {
-      //  var qrImage = qrContainer.querySelector("img");
-      //  if (qrImage) {
-        //    console.log("🔗 QR Code Generated:", qrImage.src); // Logs QR image URL
-            
-            // Make the hidden button visible
-           // document.getElementById("downloadQR").style.display = "block"; 
-            
-            // When the button is clicked, download the QR code
-          //  document.getElementById("downloadQR").addEventListener("click", function() {
-             //   var link = document.createElement("a");
-             //   link.href = qrImage.src;
-              //  link.download = "portfolio_qr_code.png"; // Set file name
-             //   document.body.appendChild(link);
-               // link.click();
-               // document.body.removeChild(link);
-           // });
-       // }
-        
-       // document.body.removeChild(qrContainer); // Remove QR div after generating
-   // },// 500); // Small delay to ensure QR code is generated
-
-
-//});
-
-    
-
 
 // Contact Form Submission
 document.getElementById("contact-form").addEventListener("submit", function(e) {
