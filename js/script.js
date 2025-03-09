@@ -30,33 +30,39 @@ botui.message.add({
 
 // QR Code Generator - Hidden but Functional
 document.addEventListener("DOMContentLoaded", function() {
-    var tempDiv = document.createElement("div"); // Create a hidden div
-    document.body.appendChild(tempDiv);
+    var qrContainer = document.createElement("div"); // Create a temporary container
+    document.body.appendChild(qrContainer); // Add it to the page (hidden)
 
-    var qrCode = new QRCode(tempDiv, {
-        text: "https://kerinq.github.io/Kerin/", // ✅ Updated portfolio link
+    var qrCode = new QRCode(qrContainer, {
+        text: "https://kerinq.github.io/Kerin/", // ✅ Your portfolio link
         width: 150,
         height: 150,
         correctLevel: QRCode.CorrectLevel.H
-  
     });
 
     setTimeout(() => {
-        var qrImage = tempDiv.querySelector("img");
+        var qrImage = qrContainer.querySelector("img");
         if (qrImage) {
-            console.log("🔗 QR Code Generated:", qrImage.src); // Logs QR image URL in the console
+            console.log("🔗 QR Code Generated:", qrImage.src); // Logs QR image URL
             
-            // Auto-download the QR code as an image
-            var link = document.createElement("a");
-            link.href = qrImage.src;
-            link.download = "portfolio_qr_code.png"; // File name
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link); // Remove after downloading
+            // Make the hidden button visible
+            document.getElementById("downloadQR").style.display = "block"; 
+            
+            // When the button is clicked, download the QR code
+            document.getElementById("downloadQR").addEventListener("click", function() {
+                var link = document.createElement("a");
+                link.href = qrImage.src;
+                link.download = "portfolio_qr_code.png"; // Set file name
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
         }
+        
+        document.body.removeChild(qrContainer); // Remove QR div after generating
+    }, 500); // Small delay to ensure QR code is generated
+});
 
-        document.body.removeChild(tempDiv); // Clean up the temporary div
-    }, 500); // Small delay to ensure the QR code is generated
 });
 
     
