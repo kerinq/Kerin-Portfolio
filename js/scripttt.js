@@ -51,16 +51,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     console.log("Event listeners attached!");
+
+    if (chatbox) {
+        chatbox.style.display = "none";
+    }
+    if (toggleChatbox) {
+        toggleChatbox.style.display = "block";
+    }
+    
 });
 
 // Debugging: Log when attaching event listeners
 console.log(" Attaching event listeners...");
-// Open Chatbox
-toggleChatbox.addEventListener("click", function () {
-    console.log("Chatbox toggle button clicked!"); // Debugging log
-    chatbox.style.display = "flex";
-    toggleChatbox.style.display = "none"; // Hide toggle button
-});
+
+const sendMessageBtn = document.getElementById("send-message");
+const chatInput = document.getElementById("chatbox-input");
+const chatMessages = document.getElementById("chatbox-messages");
 
 
     // Handle Sending Messages
