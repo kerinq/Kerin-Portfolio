@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kerin Quintero Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">My Personal Portfolio</div>
+            <div class="links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#resume">Resume</a>
+                <a href="#contact" class="contact-btn">Contact</a>
+            </div>
+            <i class="fa-solid fa-bars hamburg"></i>
+        </div>   <!-- Adding  dropdown options-->
+        <div class="dropdown">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#resume">Resume</a>
+            <a href="#contact">Contact</a>
+            <i class="fa-solid fa-xmark cancel"></i>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="main">
+        <div class="home-container">
+            <div class="content">
+                <h1>Hey, I'm <span>Kerin Quintero</span></h1>
+                <p>
+                    Hi, I'm Kerin Quintero, a passionate <strong>Computer Technology</strong> student at Bowie State University. With a strong foundation in <strong>web development, network security, and software engineering</strong>, I enjoy building
+                    <strong>innovative solutions</strong> and optimizing digital experiences.
+                </p>
+                <div class="social-links">  
+                    <a href="https://github.com/kerinq" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/kerin-quintero-a71690244/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <!----- made botton for downloading -->
+                <div class="button-group">
+                    
+                    <a href="resume improvements final (1).pdf" download class="btn">Download Resume</a>
+
+                </div>
+            </div>
+            <div class="image">
+                <img src="img/background.png.jpg" alt="Kerin Quintero Profile">
+            </div>
+        </div>
+    </section>
+
+    <!-- About and Projects Section -->
+    <div class="about-projects-container">
+        <!-- About Section -->
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>
+             I’m a senior at Bowie State University pursuing a B.S. in Computer Technology (GPA: 3.2/4.0). With experience in administrative management, logistics, and software development, I bring a unique blend of technical and leadership skills. My technical expertise includes HTML, CSS, JavaScript, Java, and network security.
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="project-list">
+                <div class="project-item">
+                    <h3> My Projects</h3>
+                    <p> This section contains essential project documents, security guidelines, study materials, and files related to my portfolio website. It includes research on AI-driven forecasting for zero-day vulnerabilities, programming assignments, structured security protocols..</p>
+                    <a href="https://github.com/kerinq/Kerin" target="_blank">View on GitHub</a>
+
+                </div>
+                <!---<div class="project-item">
+                    <h3>Project 2</h3>
+                    <p>Description of Project 2.</p>
+                    <a href="#" target="_blank">View on GitHub</a>--->
+                </div>
+            </div>
+        </section>
+    </div>
+
+<!-- Resume Section -->
+<section id="resume">
+    <h2>Resume</h2>
+    <p>Download my updated resume below:</p>
+    <a href="resume improvements final.pdf" download="resume inmprovements final.pdf" class="download-btn">Download Resume</a>
+</section>
+
+
+    <!-- Contact Section -->
+<section id="contact" class="section">
+    <h2>Contact</h2>
+    <form id="contact-form">
+        <div class="form-row">
+            <input type="text" id="name" name="name" placeholder="Your Name" required autocomplete="name">
+            <input type="email" id="email" name="email" placeholder="Your Email" required autocomplete="email">
+        </div>
+        <textarea id="message" name="message" placeholder="Your Message" required autocomplete="off"></textarea>
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+
+    <!-- Chatbot Section -->
+    <div id="botui-app" class="chatbot">
+        <bot-ui></bot-ui>
+    </div>
+
+    <!-- QR Code Section -->
+   <!----> <div id="qrcode" class="qrcode-container"></div> -->
+
+   <!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/botui/build/botui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+
+<!-- Hidden button to download the QR code -->
+<button id="downloadQR" style="display: none;">Download QR Code</button>
+
+<!-- Chatbox Section -->
+<div id="chatbox-container">
+    <div id="chatbox-header">
+        <span>Chat with Me!</span>
+        <button id="close-chat">✖</button>
+    </div>
+    <div id="chatbox-messages"></div>
+    <input type="text" id="chatbox-input" placeholder="Type a message..." />
+    <button id="send-message">Send</button>
+</div>
+
+<!-- Chatbox Toggle Button -->
+<button id="chatbox-toggle">💬 Chat</button>
+
+
+
+</body>
+
+</html>
