@@ -278,6 +278,7 @@ button:hover {
     background: white;
     color: black;
     border-radius: 10px;
+    border: 2px solid red !important;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     display: flex !important; /* Hidden initially */
     flex-direction: column;
@@ -286,7 +287,8 @@ button:hover {
   /*  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;*/
     transform: translateY(0) !important;
     opacity: 1 !important;
-    z-index: 1000;
+    /*z-index: 1000;*/
+    z-index: 9999 !important;
 }
 
 /* Show when active */
