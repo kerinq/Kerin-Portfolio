@@ -283,15 +283,15 @@ button:hover {
     flex-direction: column;
     padding: 10px;
     font-family: 'Poppins', sans-serif;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    transform: translateY(20px);
-    opacity: 0;
+  /*  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;*/
+    /*transform: translateY(20px);*/
+    /*opacity: 0;*/
     z-index: 1000;
 }
 
 /* Show when active */
 #chatbox-container.active {
-    display: flex;
+    display: flex !important;
     
     opacity: 1;
 }
