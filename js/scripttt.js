@@ -21,13 +21,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const toggleChatbox = document.getElementById("chatbox-toggle");
     const closeChat = document.getElementById("close-chat");
 
+    console.log("chatbox:", chatbox);
+    console.log("toggleChatbox:", toggleChatbox);
+    console.log("closeChat:", closeChat);
+
     if (!chatbox || !toggleChatbox || !closeChat) {
         console.error("ERROR: One or more chatbox elements were not found!");
         return;
     }
 
     // Hide chatbox initially
-    chatbox.style.display = "none";
+    /*chatbox.style.display = "none";*/
 
     // Debugging: Log when attaching event listeners
     console.log("Attaching event listeners...");
