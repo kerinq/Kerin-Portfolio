@@ -15,10 +15,16 @@ closeButton.addEventListener("click", () => {
 // Chatbot
 // Chatbox Functionality 
 document.addEventListener("DOMContentLoaded", function () {
+    console.log("JavaScript loaded correctly!");
+
     const chatbox = document.getElementById("chatbox-container");
     const toggleChatbox = document.getElementById("chatbox-toggle");
     const closeChat = document.getElementById("close-chat");
 
+    if (!chatbox || !toggleChatbox || !closeChat) {
+        console.error("One or more chatbox elements not found!");
+        return;
+    }
     // Ensure chatbox is hidden at the start
     chatbox.style.display = "none";
 
