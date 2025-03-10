@@ -14,30 +14,29 @@ closeButton.addEventListener("click", () => {
 
 // Chatbot
 // Chatbox Functionality 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const chatbox = document.getElementById("chatbox-container");
     const toggleChatbox = document.getElementById("chatbox-toggle");
     const closeChat = document.getElementById("close-chat");
-    const chatMessages = document.getElementById("chatbox-messages");
-    const chatInput = document.getElementById("chatbox-input");
-    const sendMessageBtn = document.getElementById("send-message");
 
-    // Show Chatbox when clicking the chat button
+    // Ensure chatbox is hidden at the start
+    chatbox.style.display = "none";
 
-        toggleChatbox.addEventListener("click", function() {
-            chatbox.classList.add("active");
-            toggleChatbox.style.display = "none"; // Hide the chat button
-        
-        
+    // Open Chatbox
+    toggleChatbox.addEventListener("click", function () {
+        console.log("Toggle button clicked!"); // Debugging log
+        chatbox.style.display = "flex";
+        toggleChatbox.style.display = "none"; // Hide chat button
     });
 
-    // Close Chatbox 
-    closeChat.addEventListener("click", function() {
-        chatbox.classList.remove("active");
-        setTimeout(() => {
-            toggleChatbox.style.display = "block"; // Show the chat button after closing
-        }, 300);
+    // Close Chatbox
+    closeChat.addEventListener("click", function () {
+        console.log("Close button clicked!"); // Debugging log
+        chatbox.style.display = "none";
+        toggleChatbox.style.display = "block"; // Show chat button again
     });
+});
+
 
     // Handle Sending Messages
     sendMessageBtn.addEventListener("click", function() {
