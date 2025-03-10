@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return "I'm here to help! You can ask about my resume, projects, or contact info.";
         }
     }
-});
+
 
 // Contact Form Submission
 document.getElementById("contact-form").addEventListener("submit", function(e) {
