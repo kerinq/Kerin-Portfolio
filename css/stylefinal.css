@@ -279,13 +279,13 @@ button:hover {
     color: black;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    display: none; /* Hidden initially */
+    display: flex; /* Hidden initially */
     flex-direction: column;
     padding: 10px;
     font-family: 'Poppins', sans-serif;
   /*  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;*/
-    /*transform: translateY(20px);*/
-    /*opacity: 0;*/
+    transform: translateY(0px);
+    opacity: 1;
     z-index: 1000;
 }
 
