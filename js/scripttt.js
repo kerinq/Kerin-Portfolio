@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const chatbox = document.getElementById("chatbox-container");
     const toggleChatbox = document.getElementById("chatbox-toggle");
     const closeChat = document.getElementById("close-chat");
+    const chatMessages = document.getElementById("chatbox-messages");
 
     console.log("chatbox:", chatbox);
     console.log("toggleChatbox:", toggleChatbox);
