@@ -29,6 +29,8 @@ window.onload = function () {
     // Hide chatbox initially
     chatbox.style.display = "none";
 
+ // Debugging: Log when attaching event listeners
+ console.log(" Attaching event listeners...");
     // Open Chatbox
     toggleChatbox.addEventListener("click", function () {
         console.log("Chatbox toggle button clicked!"); // Debugging log
@@ -42,6 +44,7 @@ window.onload = function () {
         chatbox.style.display = "none";
         toggleChatbox.style.display = "block"; // Show toggle button again
     });
+    console.log(" Event listeners attached!");
 };
 
 
