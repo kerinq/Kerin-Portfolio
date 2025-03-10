@@ -14,34 +14,35 @@ closeButton.addEventListener("click", () => {
 
 // Chatbot
 // Chatbox Functionality 
-document.addEventListener("DOMContentLoaded", function () {
-    console.log("JavaScript loaded correctly!");
+window.onload = function () {
+    console.log("JavaScript loaded and window is ready!");
 
     const chatbox = document.getElementById("chatbox-container");
     const toggleChatbox = document.getElementById("chatbox-toggle");
     const closeChat = document.getElementById("close-chat");
 
     if (!chatbox || !toggleChatbox || !closeChat) {
-        console.error("One or more chatbox elements not found!");
+        console.error("ERROR: One or more chatbox elements were not found!");
         return;
     }
-    // Ensure chatbox is hidden at the start
+
+    // Hide chatbox initially
     chatbox.style.display = "none";
 
     // Open Chatbox
     toggleChatbox.addEventListener("click", function () {
-        console.log("Toggle button clicked!"); // Debugging log
+        console.log("Chatbox toggle button clicked!"); // Debugging log
         chatbox.style.display = "flex";
-        toggleChatbox.style.display = "none"; // Hide chat button
+        toggleChatbox.style.display = "none"; // Hide toggle button
     });
 
     // Close Chatbox
     closeChat.addEventListener("click", function () {
-        console.log("Close button clicked!"); // Debugging log
+        console.log("Close chat button clicked!"); // Debugging log
         chatbox.style.display = "none";
-        toggleChatbox.style.display = "block"; // Show chat button again
+        toggleChatbox.style.display = "block"; // Show toggle button again
     });
-});
+};
 
 
     // Handle Sending Messages
