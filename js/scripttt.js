@@ -23,9 +23,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const sendMessageBtn = document.getElementById("send-message");
 
     // Show Chatbox when clicking the chat button
-    toggleChatbox.addEventListener("click", function() {
-        chatbox.classList.add("active");
-        toggleChatbox.style.display = "none"; // Hide the chat button
+
+        toggleChatbox.addEventListener("click", function() {
+            chatbox.classList.add("active");
+            toggleChatbox.style.display = "none"; // Hide the chat button
+        
+        
     });
 
     // Close Chatbox 

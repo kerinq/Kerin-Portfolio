@@ -292,7 +292,7 @@ button:hover {
 /* Show when active */
 #chatbox-container.active {
     display: flex;
-    transform: translateY(0);
+    
     opacity: 1;
 }
 
