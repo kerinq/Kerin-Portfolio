@@ -411,4 +411,8 @@ button:hover {
     .form-row input {
         width: 100%;
     }
+    .hidden {
+        display: none !important;
+    }
+       
     }
