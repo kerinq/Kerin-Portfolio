@@ -21,14 +21,14 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleChatbox.addEventListener("click", function () {
         console.log("Chatbox Opened!");
         chatbox.classList.remove("hidden");
-        toggleChatbox.style.display = "none";
+        toggleChatbox.style.display = "none"; // Hide toggle button
     });
 
     // Close Chatbox on Button Click
     closeChat.addEventListener("click", function () {
         console.log("Chatbox Closed!");
         chatbox.classList.add("hidden");
-        toggleChatbox.style.display = "block";
+        toggleChatbox.style.display = "block"; // Show toggle button
     });
 
     // Send Message on Button Click
