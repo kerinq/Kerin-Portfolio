@@ -278,21 +278,23 @@ button:hover {
     background: white;
     color: black;
     border-radius: 10px;
+    border: 2px solid red !important;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    display: none; /* Hidden initially */
+    display: flex !important; /* Hidden initially */
     flex-direction: column;
     padding: 10px;
     font-family: 'Poppins', sans-serif;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    transform: translateY(20px);
-    opacity: 0;
-    z-index: 1000;
+  /*  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;*/
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    /*z-index: 1000;*/
+    z-index: 9999 !important;
 }
 
 /* Show when active */
 #chatbox-container.active {
-    display: flex;
-    transform: translateY(0);
+    display: flex !important;
+    
     opacity: 1;
 }
 
@@ -363,9 +365,10 @@ button:hover {
     height: 55px;
     font-size: 20px;
     cursor: pointer;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease-in-out;
+    z-index: 9999;
+    display: block !important;  /* Make sure the button is visible */
 }
+
 
 /* Hover effect for the button */
 #chatbox-toggle:hover {
@@ -409,4 +412,9 @@ button:hover {
     .form-row input {
         width: 100%;
     }
+    .hidden {
+        display: none !important;
     }
+       
+    
+}
