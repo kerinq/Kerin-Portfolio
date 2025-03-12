@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("JavaScript loaded and window is ready!");
+    console.log(" JavaScript Loaded!");
 
     // Select Chatbox Elements
     const chatbox = document.getElementById("chatbox-container");
@@ -9,27 +9,40 @@ document.addEventListener("DOMContentLoaded", function () {
     const chatInput = document.getElementById("chatbox-input");
     const chatMessages = document.getElementById("chatbox-messages");
 
+    console.log("Chatbox:", chatbox);
+    console.log("Toggle Button:", toggleChatbox);
+    console.log("Close Button:", closeChat);
+
     if (!chatbox || !toggleChatbox || !closeChat || !sendMessageBtn || !chatInput || !chatMessages) {
-        console.error("ERROR: Missing chatbox elements!");
+        console.error(" ERROR: Chatbox elements not found!");
         return;
     }
 
-    // Initially Hide Chatbox
+    console.log(" Chatbox Elements Found!");
+
+    // Ensure button is visible
+    toggleChatbox.style.display = "block";  
+
+    // Ensure the chatbox starts hidden
     chatbox.classList.add("hidden");
 
     // Open Chatbox on Button Click
     toggleChatbox.addEventListener("click", function () {
-        console.log("Chatbox Opened!");
+        console.log(" Chatbox Opened!");
         chatbox.classList.remove("hidden");
-        toggleChatbox.style.display = "none"; // Hide toggle button
+        toggleChatbox.style.display = "none";
     });
 
     // Close Chatbox on Button Click
     closeChat.addEventListener("click", function () {
-        console.log("Chatbox Closed!");
+        console.log(" Chatbox Closed!");
         chatbox.classList.add("hidden");
-        toggleChatbox.style.display = "block"; // Show toggle button
+        toggleChatbox.style.display = "block";  
     });
+
+    console.log(" Event Listeners Attached!");
+
+    // 📌 Message Handling Functionality
 
     // Send Message on Button Click
     sendMessageBtn.addEventListener("click", function () {
@@ -81,4 +94,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+
 
