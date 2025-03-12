@@ -415,4 +415,8 @@ button:hover {
         display: none !important;
     }
        
-    }
+    
+}
+.hidden {
+    display: none !important;
+}

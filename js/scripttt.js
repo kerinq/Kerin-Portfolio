@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("JavaScript loaded and window is ready!");
 
-    // Selecting Chatbox Elements
+    // Select Chatbox Elements
     const chatbox = document.getElementById("chatbox-container");
     const toggleChatbox = document.getElementById("chatbox-toggle");
     const closeChat = document.getElementById("close-chat");
@@ -10,18 +10,23 @@ document.addEventListener("DOMContentLoaded", function () {
     const chatMessages = document.getElementById("chatbox-messages");
 
     if (!chatbox || !toggleChatbox || !closeChat || !sendMessageBtn || !chatInput || !chatMessages) {
-        console.error("ERROR: One or more chatbox elements were not found!");
+        console.error("ERROR: Missing chatbox elements!");
         return;
     }
 
-    // Open Chatbox
+    // Initially Hide Chatbox
+    chatbox.classList.add("hidden");
+
+    // Open Chatbox on Button Click
     toggleChatbox.addEventListener("click", function () {
-        chatbox.classList.remove("hidden"); // Use class for consistency
+        console.log("Chatbox Opened!");
+        chatbox.classList.remove("hidden");
         toggleChatbox.style.display = "none";
     });
 
-    // Close Chatbox
+    // Close Chatbox on Button Click
     closeChat.addEventListener("click", function () {
+        console.log("Chatbox Closed!");
         chatbox.classList.add("hidden");
         toggleChatbox.style.display = "block";
     });
