@@ -271,7 +271,7 @@ button:hover {
 
 /* Chatbox - Positioned on the right & pops up */
 #chatbox-container {
-    display: none;
+    display: none; /* Initially hidden */
     position: fixed;
     bottom: 80px;
     right: 20px;
@@ -281,6 +281,11 @@ button:hover {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     z-index: 1000;
+    color: #000; /* Ensure text is visible on white background */
+}
+
+#chatbox-container.show {
+    display: block; /* Add this class for showing the chatbox */
 }
 
 #chatbox-header {
